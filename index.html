@@ -73,20 +73,25 @@
                     <button onclick="calculateMinimax()" id="calc-btn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl transition mb-4 shadow-lg active:scale-[0.98]">
                         計算最佳猜測 (Minimax)
                     </button>
-                    
-                    <div id="recommendation-area" class="hidden animate-slideDown">
-                        <p id="calc-status" class="text-xs text-center text-slate-300 mb-3"></p>
-                        <div class="flex justify-center space-x-2 mb-4" id="ai-suggestion">
-                            <!-- AI 推薦顏色會顯示在這裡 -->
+
+                    <!-- 新增：預留固定高度的容器 (h-40 = 160px)，負責把空間撐開，避免切換時畫面跳動 -->
+                    <div class="h-40 flex flex-col justify-center items-center w-full">
+                        
+                        <div id="recommendation-area" class="hidden animate-slideDown w-full">
+                            <p id="calc-status" class="text-xs text-center text-slate-300 mb-3"></p>
+                            <div class="flex justify-center space-x-2 mb-4" id="ai-suggestion">
+                                <!-- AI 推薦顏色會顯示在這裡 -->
+                            </div>
+                            <button onclick="applyAiSuggestion()" class="w-full bg-slate-600 hover:bg-slate-500 text-white font-semibold py-2 rounded-lg transition border border-slate-500 active:scale-[0.98]">
+                                <span class="lg:hidden">↑</span><span class="hidden lg:inline">←</span> 將此組合套用至遊戲區
+                            </button>
                         </div>
-                        <button onclick="applyAiSuggestion()" class="w-full bg-slate-600 hover:bg-slate-500 text-white font-semibold py-2 rounded-lg transition border border-slate-500">
-                            ↓ 將此組合套用至遊戲區
-                        </button>
-                    </div>
-                    
-                    <div id="ai-idle-state" class="text-center text-slate-500 text-sm py-4">
-                        點擊上方按鈕開始計算...
-                    </div>
+                        
+                        <div id="ai-idle-state" class="text-center text-slate-500 text-sm w-full">
+                            點擊上方按鈕開始計算...
+                        </div>
+                        
+                    </div>                    
                 </div>
             </div>
         </div>
