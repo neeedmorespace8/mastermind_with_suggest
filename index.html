@@ -23,7 +23,7 @@
     <div class="w-full max-w-4xl h-full lg:h-[90dvh] flex flex-col lg:flex-row lg:rounded-3xl overflow-hidden lg:shadow-2xl lg:border border-slate-800 relative bg-slate-900">
 
         <!-- 左半邊 / 上半邊：遊戲區 -->
-        <div class="w-full lg:w-1/2 h-[60%] lg:h-full bg-slate-100 flex flex-col relative z-10 shadow-2xl lg:shadow-none">
+        <div class="w-full lg:w-1/2 h-[45%] lg:h-full bg-slate-100 flex flex-col relative z-10 shadow-2xl lg:shadow-none">
             <!-- 標題列 -->
             <div class="bg-slate-800 text-white p-4 flex justify-between items-center shadow-md shrink-0">
                 <h1 class="text-lg font-bold">實戰遊戲區 <span class="text-xs text-slate-400 font-normal ml-1">(4色5燈)</span></h1>
@@ -48,7 +48,7 @@
                     <div onclick="cycleColor(3)" id="guess-3" class="no-tap-highlight w-12 h-12 rounded-full cursor-pointer shadow-inner border-4 border-gray-100 transition-colors duration-200"></div>
                     <div onclick="cycleColor(4)" id="guess-4" class="no-tap-highlight w-12 h-12 rounded-full cursor-pointer shadow-inner border-4 border-gray-100 transition-colors duration-200"></div>
                 </div>
-                <button onclick="submitGuess()" id="submit-btn" class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold py-3 rounded-xl shadow-md transition-transform transform active:scale-[0.98] text-lg">
+                <button onclick="submitGuess()" id="submit-btn" class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold py-2 rounded-xl shadow-md transition-transform transform active:scale-[0.98] text-lg">
                     確認猜測
                 </button>
             </div>
@@ -62,7 +62,7 @@
         </div>
 
         <!-- 右半邊 / 下半邊：AI 演算法輔助區 -->
-        <div class="w-full lg:w-1/2 h-[40%] lg:h-full bg-slate-900 border-t-4 lg:border-t-0 lg:border-l border-slate-800 flex flex-col p-4 sm:p-6 lg:p-8 text-white overflow-y-auto">
+        <div class="w-full lg:w-1/2 h-[55%] lg:h-full bg-slate-900 border-t-4 lg:border-t-0 lg:border-l border-slate-800 flex flex-col p-4 sm:p-6 lg:p-8 text-white overflow-y-auto">
             <h2 class="text-xl font-bold mb-1 text-blue-400">Minimax 大腦輔助器</h2>
             <p class="text-sm text-slate-400 mb-4 border-b border-slate-700 pb-4">
                 狀態：已連動數據。剩餘可能：<span id="pool-count" class="text-white font-bold text-lg bg-slate-800 px-2 py-1 rounded ml-1">1024</span> 種
@@ -70,7 +70,7 @@
 
             <div class="flex-1 flex flex-col justify-center">
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 shadow-inner">
-                    <button onclick="calculateMinimax()" id="calc-btn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl transition mb-4 shadow-lg active:scale-[0.98]">
+                    <button onclick="calculateMinimax()" id="calc-btn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 rounded-xl transition mb-4 shadow-lg active:scale-[0.98]">
                         計算最佳猜測 (Minimax)
                     </button>
 
